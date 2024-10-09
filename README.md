@@ -62,3 +62,12 @@ Navigate to the root directory of your project and run the following command:
 
 ```bash
 mvn spring-boot:run
+
+### Using an IDE:
+1. Open the project in **Spring Tool Suite (STS)**, **IntelliJ**, or **Eclipse**.
+2. Right-click on the main application file (usually named `Application.java` or `YourAppNameApplication.java`).
+3. Select **Run As -> Spring Boot App**.
+
+### Access the Application:
+- Open your browser and navigate to [http://localhost:8080](http://localhost:8080).
+- To view the Swagger API documentation (if integrated), go to [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html).
