@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <meta charset="UTF-8">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header</title>
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" th:href="@{/css/header.css}">
+    <!-- Font Awesome for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+<header th:fragment="header">
+    <nav class="navbar">
+        <div class="logo">
+            <a th:href="@{/}">DakshKrishi</a>
+			<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia"> <!-- Added link to home page -->
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search for Products" />
+            <button>Search</button>
+        </div>
+        <ul class="nav-links">
+			
+            <li><a th:href="@{/users/home}">Home</a></li>
+            <li><a href="#">Categories</a></li>
+            <li><a href="#">Cart</a></li>
+
+            <!-- Display username and logout option if user is logged in -->
+            <li class="profile" th:if="${username != null}">
+                <a href="#" class="profile-icon">
+                    <img th:src="@{/images/R.png}" alt="Profile" class="profile-img" />
+                </a>
+                <div class="dropdown">
+                    <center><h4><span th:text="${username}">Username</span></h3></center> <!-- Display username -->
+                    <a th:href="@{/users/profile}">Profile</a>
+                    <a th:href="@{/users/logout}">Logout</a>
+                </div>
+            </li>
+
+            <!-- Optional: Display login link if username is null -->
+            <li th:if="${username == null}">
+                <a th:href="@{/users/login}">Login</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+</body>
+</html>

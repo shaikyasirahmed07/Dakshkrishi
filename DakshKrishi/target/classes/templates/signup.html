@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Role-Based Signup</title>
+    <link rel="stylesheet" th:href="@{/css/header.css}">
+    <link rel="stylesheet" th:href="@{/css/signup.css}">
+    <script type="text/javascript">
+        function validateForm() {
+            var userName = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirm-password").value;
+
+            // Username validation
+            if (userName.length < 5 || userName.length > 14) {
+                alert("Username must be between 5 and 14 characters");
+                return false; // Prevent form submission
+            }
+
+            // Password validation
+            if (password.length < 7 || password.length > 14) {
+                alert("Password must be between 7 and 14 characters");
+                return false; // Prevent form submission
+            }
+            if (!/(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])/.test(password)) {
+                alert("Password must contain at least one uppercase letter, one lowercase letter, one digit, and one special character");
+                return false; // Prevent form submission
+            }
+
+            // Confirm password
+            if (password !== confirmPassword) {
+                alert("Passwords do not match");
+                return false; // Prevent form submission
+            }
+
+            return true; // Allow form submission
+        }
+    </script>
+</head>
+<body>
+    <div th:replace="(~{fragments/header :: header})"></div>
+    
+    <div class="signup-container">
+        <div class="signup-box">
+            <h1>Create an Account</h1>
+
+            <div th:if="${session.message}" th:classappend="${session.message?.type}">
+                <p th:text="${session.message?.content}"></p>
+            </div>
+
+            <form action="#" th:action="@{/users/do_register}" method="post" th:object="${userData}" onsubmit="return validateForm();">
+                
+                <!-- Username input -->
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input type="text" 
+                           id="username"
+                           th:field="*{name}"
+                           placeholder="Enter your username"
+                           th:classappend="${#fields.hasErrors('name') ? 'is-invalid' : ''}" 
+                           required />
+                    <div class="invalid-feedback" th:if="${#fields.hasErrors('name')}">
+                        <p th:each="err : ${#fields.errors('name')}" th:text="${err}"></p>
+                    </div>
+                </div>
+
+                <!-- Email input -->
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" 
+                           id="email"
+                           th:field="*{email}"
+                           placeholder="Enter your email"
+                           th:classappend="${#fields.hasErrors('email') ? 'is-invalid' : ''}" 
+                           required />
+                    <div class="invalid-feedback" th:if="${#fields.hasErrors('email')}">
+                        <p th:each="err : ${#fields.errors('email')}" th:text="${err}"></p>
+                    </div>
+                </div>
+
+                <!-- Password input -->
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" 
+                           id="password"
+                           th:field="*{password}"
+                           placeholder="Enter your password"
+                           th:classappend="${#fields.hasErrors('password') ? 'is-invalid' : ''}" 
+                           required />
+                    <div class="invalid-feedback" th:if="${#fields.hasErrors('password')}">
+                        <p th:each="err : ${#fields.errors('password')}" th:text="${err}"></p>s
+                    </div>
+                </div>
+
+                <!-- Confirm Password input -->
+                <div class="input-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" 
+                           id="confirm-password"
+                           placeholder="Confirm your password"
+                           required />
+                </div>
+
+                <!-- Role selection -->
+                <div class="input-group">
+                    <label for="role">Sign up as:</label>
+                    <select id="role" 
+                            th:field="*{role}"
+                            th:classappend="${#fields.hasErrors('role') ? 'is-invalid' : ''}" 
+                            required>
+                        <option value="" disabled selected>Select role</option>
+                        <option value="farmer">Farmer</option>
+                        <option value="buyer">Buyer</option>
+                        <option value="admin">Admin</option>
+                    </select>
+                    <div class="invalid-feedback" th:if="${#fields.hasErrors('role')}">
+                        <p th:each="err : ${#fields.errors('role')}" th:text="${err}"></p>
+                    </div>
+                </div>
+
+                <!-- Submit button -->
+                <button type="submit">Sign Up</button>
+            </form>
+
+            <div class="login-link">
+                <p>Already have an account? <a th:href="@{/users/login}">Login here</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DakshKrishi Footer</title>
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" th:href="@{/css/footer.css}">
+    <!-- Font Awesome for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <footer>
+        <div class="footer-content">
+            <!-- Company section -->
+            <div class="footer-section">
+                <h1>DakshKrishi</h1>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms and Conditions</a></li>
+                </ul>
+            </div>
+
+            <!-- Help section -->
+            <div class="footer-section">
+                <h2>Help</h2>
+                <ul>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- App download section -->
+            <div class="footer-section app-links">
+                <h2>Download Our App</h2>
+                <a href="#"><img th:src="@{/images/googleplay.png}" alt="Google Play"></a>
+                <a href="#"><img th:src="@{/images/appstore.png}" alt="App Store"></a>
+            </div>
+
+            <!-- Social icons section -->
+            <div class="footer-section social-icons">
+				<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+                <h2>Follow Us</h2>
+				
+				<ul>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/yasirahmed07/"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-pinterest"></i></a></ul>
+            </div>
+        </div>
+
+        <!-- Cities we serve section -->
+        <div class="footer-bottom">
+            <div class="cities">
+                <p>Cities We Serve:Bangalore | Hindupuram | Chennai | Hyderabad | Visakhapatnam | Mysuru | Vijayawada | Guntur | Kochi | Madurai | Trivandrum | ...</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

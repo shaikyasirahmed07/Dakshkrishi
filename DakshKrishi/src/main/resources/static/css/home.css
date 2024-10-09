@@ -1,0 +1,197 @@
+@charset "UTF-8";
+
+/* General body styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f4f4f4; /* Light background for contrast */
+}
+
+/* Hero section styling */
+.hero {
+    background-color: rgb(62, 106, 56); /* Rich green background */
+	font-family: "Audiowide", sans-serif;
+    color: white; /* White text for contrast */
+    padding: 60px 20px; /* Spacious padding */
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.hero h1 {
+    font-size: 48px; /* Larger font size for emphasis */
+    margin-bottom: 15px;
+    font-weight: bold; /* Bold for prominence */
+}
+
+.hero p {
+    font-size: 20px; /* Increased font size for readability */
+    line-height: 1.5; /* Improved line spacing */
+}
+
+/* Product gallery styling */
+.product-gallery {
+    padding: 40px 20px; /* Spacious padding */
+}
+
+.products {
+    display: flex;
+    justify-content: space-between; /* Even space between products */
+    flex-wrap: wrap;
+    max-width: 1200px; /* Limit max width for better layout */
+    margin: 0 auto; /* Center the gallery */
+}
+
+.product-item {
+    background-color: white; /* White background for product items */
+    border: 1px solid #ddd; /* Light border for subtlety */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px;
+    text-align: center;
+    margin: 15px; /* Increased margin for better spacing */
+    width: calc(25% - 30px); /* Four items per row with spacing */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Enhanced shadow for elevation */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
+}
+
+.product-item:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+.product-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Consistent rounded corners */
+    transition: transform 0.3s; /* Smooth zoom effect */
+}
+
+.product-item img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.product-item h3 {
+    font-size: 20px; /* Slightly larger font size for product titles */
+    color: #333;
+    margin: 10px 0;
+    font-weight: normal; /* Normal weight for readability */
+}
+
+.product-item p {
+    font-size: 16px;
+    color: rgb(138, 154, 91); /* Orange for pricing or highlights */
+    margin-bottom: 15px; /* Space below product description */
+}
+
+.product-item button {
+    padding: 12px 20px; /* Increased padding for better clickability */
+    font-size: 16px;
+    background-color: rgb(178, 34, 34); /* Bright orange for buttons */
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+    font-weight: bold; /* Bold for prominence */
+}
+
+.product-item button:hover {
+    background-color: rgb(138, 154, 91); /* Darker orange on hover */
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .product-item {
+        width: calc(50% - 30px); /* Two items per row on smaller screens */
+    }
+
+    .hero h1 {
+        font-size: 36px; /* Responsive font size */
+    }
+
+    .hero p {
+        font-size: 18px; /* Responsive font size */
+    }
+}
+
+@media (max-width: 480px) {
+    .product-item {
+        width: 100%; /* Full width on very small screens */
+        margin: 10px 0; /* Adjust margin for smaller screens */
+    }
+
+    .hero h1 {
+        font-size: 28px; /* Smaller font size for mobile */
+    }
+
+    .hero p {
+        font-size: 16px; /* Smaller font size for mobile */
+    }
+}
+
+/* Footer Styling */
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 0 20px;
+    max-width: 300px;
+    text-align: center;
+}
+
+.footer-section h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: rgb(62, 106, 56); /* BigBasket-like green for headings */
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-section ul li a {
+    color: rgb(62, 106, 56); /* Apply green color to links */
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline; /* Hover effect */
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 24px;
+    margin: 0 10px;
+}
+
+.footer-bottom {
+    background-color: #111;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 14px;
+}

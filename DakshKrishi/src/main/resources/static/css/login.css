@@ -1,0 +1,108 @@
+/* Style for the login section */
+.login-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+/* Login container that centers the box */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Login box styling */
+.login-box {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Headline for login form */
+.login-box h1 {
+    margin-bottom: 20px;
+	font-family: "Sofia", sans-serif;
+	font-size: 28px;
+	text-shadow: 3px 3px 3px #ababab;
+    color: #333;
+}
+
+/* Input fields styling */
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+}
+
+.input-group input:focus {
+    border-color: rgb(62, 106, 56);
+}
+
+/* Remember me section */
+.remember-me {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.remember-me input {
+    margin-right: 10px;
+}
+
+/* Button styling */
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: rgb(62, 106, 56);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: rgb(62, 106, 56);
+}
+
+/* Signup link */
+.signup-link {
+    margin-top: 15px;
+}
+
+.signup-link p {
+    font-size: 14px;
+}
+
+.signup-link a {
+    color: rgb(62, 106, 56);
+    text-decoration: none;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,155 @@
+/* General body styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f4f4f4; /* Softer background for a professional feel */
+}
+
+/* Navbar styling */
+.navbar {
+    background-color: rgb(62, 106, 56); /* A more subtle green */
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    position: relative;
+    z-index: 1000; /* Ensures the navbar appears on top */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+/* Logo styling */
+.logo a {
+    color: #ffffff; /* White color for contrast */
+    text-decoration: none;
+	font-family: "Sofia", sans-serif;
+    font-size: 30px; /* Slightly larger font size */
+    font-weight: bold;
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+.logo a:hover {
+    color: #ffcc00; /* Gentle highlight on hover */
+}
+
+/* Search bar styling */
+.search-bar {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    margin: 0 20px;
+    max-width: 600px; /* Limits the size of the search bar */
+}
+
+.search-bar input {
+    padding: 12px; /* Comfortable padding */
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 400px;
+    transition: border-color 0.3s; /* Smooth border transition */
+}
+
+.search-bar input:focus {
+    border-color: rgb(62, 106, 56); /* Highlight border on focus */
+    outline: none;
+}
+
+.search-bar button {
+    padding: 12px 15px; /* Increased button padding */
+    font-size: 16px;
+    background-color: rgb(178, 34, 34); /* Bright orange for the search button */
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-left: 10px;
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition */
+}
+
+.search-bar button:hover {
+    background-color: rgb(138, 154, 91); /* Darker shade of orange */
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+/* Navigation links styling */
+.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #ffffff; /* White text for the navbar links */
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+.nav-links a:hover {
+    color: #ffcc00; /* Gentle highlight on hover */
+    text-decoration: underline; /* Underline for interaction */
+}
+
+/* Profile icon and dropdown styling */
+.profile {
+    position: relative;
+    display: inline-block;
+}
+
+.profile-icon {
+    cursor: pointer;
+}
+
+.profile-img {
+    width: 36px; /* Slightly larger for better visibility */
+    height: 36px;
+    border-radius: 50%;
+    transition: transform 0.3s; /* Smooth transition */
+}
+
+.profile-img:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+.profile:hover .dropdown {
+    display: block;
+}
+
+/* Dropdown menu */
+.dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #ffffff; /* White background for dropdown */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    min-width: 150px;
+    z-index: 1;
+    border-radius: 5px; /* Rounded corners */
+}
+
+.dropdown a {
+    color: #333;
+    padding: 10px 20px;
+    display: block;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.dropdown a:hover {
+    background-color: #f1f1f1; /* Light background on hover */
+}
+
+/* Ensuring the login form is not overridden by navbar styling */
+.login-container {
+    margin-top: 100px; /* Adds space between navbar and form */
+}

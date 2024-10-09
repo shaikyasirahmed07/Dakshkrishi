@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>User Info</title>
+<!-- Link to CSS files -->
+<link rel="stylesheet" th:href="@{/css/header.css}">
+<link rel="stylesheet" th:href="@{/css/footer.css}">
+<link rel="stylesheet" th:href="@{/css/info.css}">
+<!-- Add Font Awesome link if needed for icons -->
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+	<!-- Corrected th:replace syntax for Thymeleaf fragment inclusion -->
+	<div th:replace="(~{fragments/header :: header})"></div>
+
+
+    <div class="section">
+    
+<div class="sidebar">
+    <ul>
+    <!-- Personal Details section with nested items -->
+    <li>
+        <a th:href="@{/personal-details}">Personal Details</a>
+        <ul>
+            <li><a th:href="@{/edit-profile}">- Edit Profile</a></li>
+            <li><a th:href="@{/delivery-addresses}">- Delivery Addresses</a></li>
+            <li><a th:href="@{/email-addresses}">- Email Addresses</a></li>
+        </ul>
+    </li>
+
+    <!-- Shop From section with nested items -->
+    <li>
+        <a th:href="@{/shop-from}">Shop From</a>
+        <ul>
+            <li><a th:href="@{/smart-basket}">- Smart Basket</a></li>
+            <li><a th:href="@{/shopping-list}">- Shopping List</a></li>
+            <li><a th:href="@{/past-orders}">- Past Order</a></li>
+        </ul>
+    </li>
+
+    <!-- Other items -->
+    <li><a th:href="@{/my-orders}">My Orders</a></li>
+    <li><a th:href="@{/customer-service}">Customer Service</a></li>
+    <li><a th:href="@{/my-gift-cards}">My Gift Cards</a></li>
+    <li><a th:href="@{/my-payments}">My Payments</a></li>
+    <li><a th:href="@{/alerts-notifications}">Alerts & Notification</a></li>
+</ul>
+</div>
+    
+    </div>
+	<div class="profile-details">
+            <h2>Profile Details <a href="#">( Edit )</a></h2>
+
+            <div class="user-info">
+                Displaying user's name
+                <h3 ><!-- th:text="${user.name}" -->Jaleel Shaik</h3>
+                <p>
+                    Font Awesome email icon and user's email
+                    <i class="fa fa-envelope"></i> 
+                    <span ><!-- th:text="${user.email}" -->jaleelbasha18@gmail.com</span>
+                </p>
+                <p>
+                    Font Awesome phone icon and user's phone
+                    <i class="fa fa-phone"></i>
+                    <span ><!-- th:text="${user.phone}" --> +91 9390902587</span>
+                </p>
+            </div>
+
+            <div class="order-section">
+                <h3>My Orders</h3>
+                Displaying user's balance
+                <p>BALANCE: <span ><!-- th:text="${user.balance}" --> Rs 0</span></p>
+
+                No orders message
+                <div class="no-orders">
+                    <p>You haven't placed any order yet, <a href="#">Start Shopping!</a></p>
+                </div>
+            </div> 
+            </div>
+
+	<!-- Footer inclusion corrected -->
+	<div th:replace="(~{fragments/footer :: footer})"></div>
+
+</body>
+</html>

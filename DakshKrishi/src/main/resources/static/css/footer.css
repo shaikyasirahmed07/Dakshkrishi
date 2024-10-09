@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 20px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 0 20px;
+    max-width: 300px;
+    text-align: center;
+}
+
+.footer-section h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-section ul li {
+    margin: 5px 10px;
+    font-size: 14px;
+}
+
+.footer-section ul li a {
+    color: #84c225;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s; /* Smooth transition for hover */
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+    color: #6aa024; /* Darker shade on hover */
+}
+
+.app-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.app-links a img {
+    width: 140px;
+    height: auto;
+    margin: 0;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 24px;
+    margin: 0 10px;
+    transition: color 0.3s; /* Smooth transition for hover */
+}
+
+.social-icons a:hover {
+    color: #84c225; /* Change color on hover */
+}
+
+.footer-bottom {
+    background-color: #111;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+.cities {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        max-width: 100%;
+        padding: 10px 0;
+    }
+
+    .app-links {
+        flex-direction: column;
+		
+    }
+
+    .app-links a img {
+		color: aliceblue;
+        width: 120px;
+    }
+}

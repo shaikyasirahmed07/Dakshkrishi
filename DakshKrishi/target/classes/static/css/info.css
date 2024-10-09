@@ -1,0 +1,109 @@
+@charset "UTF-8";
+
+/* General body styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Soft background color */
+}
+
+/* Main container for the layout */
+.container {
+    display: flex;
+    max-width: 1200px; /* Max width for content */
+    margin: 0 auto; /* Center the container */
+}
+
+/* Sidebar styles */
+.sidebar {
+    width: 25%; /* Slightly wider sidebar */
+    background-color: #ffffff; /* White background for contrast */
+    padding: 30px;
+    border-right: 1px solid #ddd; /* Soft border for separation */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.sidebar h3 {
+    margin-bottom: 20px;
+    color: #333; /* Darker text for headings */
+    font-size: 18px; /* Increased font size */
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0; /* Increased spacing */
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #0275d8; /* Link color */
+    font-size: 16px; /* Increased font size */
+    transition: color 0.3s; /* Smooth transition */
+}
+
+.sidebar ul li a:hover {
+    color: #0056b3; /* Darker blue on hover */
+}
+
+/* Profile details styles */
+.profile-details {
+    width: 75%; /* Adjusted width */
+    padding: 30px; /* Increased padding for comfort */
+    background-color: #ffffff; /* White background for content */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow for elevation */
+    border-radius: 8px; /* Rounded corners */
+    margin-left: 20px; /* Space between sidebar and content */
+}
+
+.profile-details h2 {
+    margin-bottom: 15px;
+    color: #333; /* Darker text for main titles */
+}
+
+.profile-details a {
+    color: #0275d8; /* Link color */
+    text-decoration: none;
+}
+
+.profile-details .user-info {
+    margin-bottom: 30px; /* Increased spacing for separation */
+}
+
+.user-info h3 {
+    margin: 0;
+    font-size: 20px; /* Increased font size for user name */
+    color: #333; /* Darker text for better readability */
+}
+
+.user-info p {
+    margin: 5px 0;
+    color: #555; /* Softer text color for additional info */
+}
+
+/* Order section styles */
+.order-section h3 {
+    margin-top: 30px; /* Increased margin for section title */
+    font-size: 18px; /* Increased font size */
+    color: #333; /* Darker text color */
+}
+
+.order-section .no-orders p {
+    margin: 15px 0; /* Increased margin */
+    color: #333;
+    font-size: 16px; /* Consistent font size */
+}
+
+.no-orders a {
+    color: #0275d8; /* Link color */
+    text-decoration: none;
+    transition: color 0.3s; /* Smooth transition */
+}
+
+.no-orders a:hover {
+    text-decoration: underline; /* Underline on hover for clarity */
+}

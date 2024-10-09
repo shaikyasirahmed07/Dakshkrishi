@@ -1,0 +1,114 @@
+/* Styling the signup container */
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    background-color: #f9f9f9;
+    margin: 0; /* Remove default margin */
+    padding: 0;
+}
+
+/* Styling the signup box */
+.signup-box {
+    width: 400px;
+    padding: 30px;
+    background-color: white;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Form styling */
+.signup-box h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Validation styles */
+.is-invalid {
+    border-color: red;
+}
+
+.invalid-feedback {
+    color: red;
+    font-size: 0.9em;
+    display: block;
+    margin-top: 5px;
+}
+
+/* Button styling */
+.signup-box button {
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(62, 106, 56); /* Green color */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.signup-box button:hover {
+    background-color: rgb(62, 106, 56);
+}
+
+/* Login link styling */
+.login-link {
+    margin-top: 15px;
+}
+
+.login-link p {
+    font-size: 14px;
+}
+
+.login-link a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/* Alert message styling */
+.alert {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Alert success styling */
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+/* Alert danger styling */
+.alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+}

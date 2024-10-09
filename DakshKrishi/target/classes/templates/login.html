@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DakshKrishi Login</title>
+    <!-- Link to the CSS files using Thymeleaf's syntax -->
+    <link rel="stylesheet" th:href="@{/css/header.css}">
+    <link rel="stylesheet" th:href="@{/css/login.css}">
+</head>
+<body>s
+    <!-- Include the header fragment using Thymeleaf -->
+    <div th:replace="~{fragments/header :: header}"></div>
+    
+    <section class="login-section">
+        <div class="login-container">
+            <div class="login-box">
+                <h1 style="color: green;">Login to DakshKrishi</h1>
+				<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia"> <!-- Corrected inline CSS -->
+                
+                <!-- Display login error if it exists -->
+                <div th:if="${loginError}" class="error-message">
+                    <p th:text="${loginError}"></p>
+                </div>
+                
+                <!-- Form action using Thymeleaf for the POST method -->
+                <form th:action="@{/users/do_login}" method="post" th:object="${userData}">
+                    <div class="input-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="name" th:field="*{name}" placeholder="Enter your username" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" th:field="*{password}" placeholder="Enter your password" required>
+                    </div>
+                    <div class="remember-me">
+                        <input type="checkbox" id="remember" name="remember">
+                        <label for="remember">Remember me</label>
+                    </div>
+                    <button type="submit" class="login-btn">Login</button>
+                </form>
+                <div class="signup-link">
+                    <p>Don't have an account? <a th:href="@{/users/signup}">Sign up here</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
