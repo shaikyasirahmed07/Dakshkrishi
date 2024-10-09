@@ -71,3 +71,47 @@ mvn spring-boot:run
 ### Access the Application:
 - Open your browser and navigate to [http://localhost:8080](http://localhost:8080).
 - To view the Swagger API documentation (if integrated), go to [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html).
+
+## Application Structure
+├── src
+│   ├── main
+│   │   ├── java
+│   │   │   └── com.example.jfsdapp
+│   │   │       ├── controller        # REST Controllers
+│   │   │       ├── model             # Entity Models
+│   │   │       ├── repository        # JPA Repositories
+│   │   │       ├── service           # Service Layer
+│   │   │       └── Application.java  # Main Application Class
+│   │   ├── resources
+│   │       ├── application.properties # Application Configuration
+│   │       └── static                 # Static Resources (HTML, CSS, JS)
+│   └── test                           # Test Files
+├── pom.xml                             # Maven POM File
+└── README.md                           # README File
+
+## Endpoints
+Here is a brief list of endpoints available in the application:
+
+- **GET** `/api/items` - Retrieves all items.
+- **GET** `/api/items/{id}` - Retrieves a specific item by ID.
+- **POST** `/api/items` - Creates a new item.
+- **PUT** `/api/items/{id}` - Updates an existing item.
+- **DELETE** `/api/items/{id}` - Deletes an item by ID.
+
+## Troubleshooting
+### Database Connection Issues:
+- Ensure that the database is running and the configurations in `application.properties` are correct.
+
+Port Conflicts:
+
+If port 8080 is already in use, change the port in application.properties:
+
+server.port=8081
+Contributing
+Fork the repository.
+Create a new feature branch:
+
+
+git checkout -b feature-name
+
+
