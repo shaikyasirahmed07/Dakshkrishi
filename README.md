@@ -1,3 +1,5 @@
+
+
 # JFSD Spring Boot Application
 
 ## Table of Contents
@@ -62,4 +64,70 @@ Navigate to the root directory of your project and run the following command:
 
 ```bash
 mvn spring-boot:run
+```
 
+Using an IDE:
+Open the project in Spring Tool Suite (STS), IntelliJ, or Eclipse.
+Right-click on the main application file (usually named Application.java or YourAppNameApplication.java).
+Select Run As -> Spring Boot App.
+Access the Application:
+Open your browser and navigate to http://localhost:8080.
+To view the Swagger API documentation (if integrated), go to http://localhost:8080/swagger-ui.html.
+
+### Application Structure:
+```bash
+├── src
+│   ├── main
+│   │   ├── java
+│   │   │   └── com.example.jfsdapp
+│   │   │       ├── controller        # REST Controllers
+│   │   │       ├── model             # Entity Models
+│   │   │       ├── repository        # JPA Repositories
+│   │   │       ├── service           # Service Layer
+│   │   │       └── Application.java  # Main Application Class
+│   │   ├── resources
+│   │       ├── application.properties # Application Configuration
+│   │       └── static                 # Static Resources (HTML, CSS, JS)
+│   └── test                           # Test Files
+├── pom.xml                             # Maven POM File
+└── README.md                           # README File
+```
+
+### Endpoints
+Here is a brief list of endpoints available in the application:
+
+- GET /api/items - Retrieves all items.
+- GET /api/items/{id} - Retrieves a specific item by ID.
+- POST /api/items - Creates a new item.
+- PUT /api/items/{id} - Updates an existing item.
+- DELETE /api/items/{id} - Deletes an item by ID.
+### Troubleshooting
+### Database Connection Issues:
+
+- Ensure that the database is running and the configurations in application.properties are correct.
+## Port Conflicts:
+
+- If port 8080 is already in use, change the port in application.properties:
+```bash
+server.port=8081
+```
+
+### Contributing
+- Fork the repository.
+- Create a new feature branch:
+```bash
+git checkout -b feature-name
+```
+
+- Commit your changes:
+```bash
+git commit -m 'Add some feature'
+```
+
+- Push to the branch:
+```bash
+git push origin feature-name
+```
+
+- Create a pull request.
+  
